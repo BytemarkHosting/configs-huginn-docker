@@ -88,15 +88,22 @@ services:
       - backend
     environment:
       # IMPORTANT: Uncomment the "DO_NOT_SEED" line after you have it up and
-      #  running, otherwise the admin user and default agents will be recreated!
+      #  running, otherwise the admin user and default agents will be recreated
+      #  every time this is restarted!
+      #
       # DO_NOT_SEED: "true"
+      #
+      # Database configuration
       MYSQL_PORT_3306_TCP_ADDR: huginn-db
       MYSQL_ROOT_PASSWORD: ${HUGINN_DB_ROOT_PASSWORD}
       HUGINN_DATABASE_NAME: ${HUGINN_DB_NAME}
       HUGINN_DATABASE_USERNAME: ${HUGINN_DB_USER}
       HUGINN_DATABASE_PASSWORD: ${HUGINN_DB_PASSWORD}
+      DATABASE_ENCODING: "utf8mb4"
+      # Email Configuration
       SMTP_DOMAIN: ${TRAEFIK_DOMAINS}
       EMAIL_FROM_ADDRESS: ${HUGINN_EMAIL}
+      INVITATION_CODE: ${HUGINN_INVITATION_CODE}
       SMTP_USER_NAME: "none"
       SMTP_PASSWORD: "none"
       SMTP_SERVER: "mail"
