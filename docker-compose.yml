@@ -89,7 +89,7 @@ services:
     environment:
       # IMPORTANT: Uncomment the "DO_NOT_SEED" line after you have it up and
       #  running, otherwise the admin user and default agents will be recreated!
-      # DO_NOT_SEED = "true"
+      # DO_NOT_SEED: "true"
       MYSQL_PORT_3306_TCP_ADDR: huginn-db
       MYSQL_ROOT_PASSWORD: ${HUGINN_DB_ROOT_PASSWORD}
       HUGINN_DATABASE_NAME: ${HUGINN_DB_NAME}
