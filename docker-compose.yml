@@ -91,7 +91,7 @@ services:
       #  running, otherwise the admin user and default agents will be recreated
       #  every time this is restarted!
       #
-      # DO_NOT_SEED: "true"
+      #DO_NOT_SEED: "true"
       #
       # Database configuration
       MYSQL_PORT_3306_TCP_ADDR: huginn-db
