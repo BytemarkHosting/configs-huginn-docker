@@ -100,10 +100,11 @@ services:
       HUGINN_DATABASE_USERNAME: ${HUGINN_DB_USER}
       HUGINN_DATABASE_PASSWORD: ${HUGINN_DB_PASSWORD}
       DATABASE_ENCODING: "utf8mb4"
+      # Invitation code for new signups
+      INVITATION_CODE: ${HUGINN_INVITATION_CODE}
       # Email Configuration
       SMTP_DOMAIN: ${TRAEFIK_DOMAINS}
       EMAIL_FROM_ADDRESS: ${HUGINN_EMAIL}
-      INVITATION_CODE: ${HUGINN_INVITATION_CODE}
       SMTP_USER_NAME: "none"
       SMTP_PASSWORD: "none"
       SMTP_SERVER: "mail"
