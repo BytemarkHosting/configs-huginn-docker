@@ -86,12 +86,9 @@ services:
       - frontend
       - backend
     environment:
-      # IMPORTANT: Uncomment the "DO_NOT_SEED" line after you have it up and
-      #  running, otherwise the admin user and default agents will be recreated
-      #  every time this is restarted!
-      #
+      # IMPORTANT: After you've started your containers for the first time,
+      # uncomment the "DO_NOT_SEED" line. Otherwise the admin user is reset.
       #DO_NOT_SEED: "true"
-      #
       # Database configuration
       MYSQL_PORT_3306_TCP_ADDR: huginn-db
       MYSQL_ROOT_PASSWORD: ${HUGINN_DB_ROOT_PASSWORD}
