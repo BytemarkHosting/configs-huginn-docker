@@ -65,7 +65,6 @@ services:
     image: mariadb:10.3
     restart: always
     networks:
-      - frontend
       - backend
     volumes:
       # Ensure the database persists between restarts.
@@ -157,4 +156,4 @@ services:
     restart: always
     networks:
       - frontend
-      
+
